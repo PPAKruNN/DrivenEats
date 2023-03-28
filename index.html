@@ -26,13 +26,14 @@
 
         <h1>Primeiro, seu prato</h1>
         <div class="options-box">
-            <div class="option">
-                <img src="src/manoel.jpg" alt="img">
+            <div class="option selected-option">
+                <img class="option-img" src="src/manoel.jpg" alt="img">
                 <h1>Frango Yin Yang</h1>
                 <h2>Um pouco de batata, um pouco de salada</h2>
                 <span class="price">R$ 14,90</span>
+                <img class="check" src="src/checkmark-circle-outline.svg">
             </div>
-            <div class="option">
+            <div class="option" onclick="optionClicked('prato', this)">
                 <img src="src/manoel.jpg" alt="img">
                 <h1>Frango Yin Yang</h1>
                 <h2>Um pouco de batata, um pouco de salada</h2>
@@ -165,5 +166,6 @@
             Selecione os 3 itens para fechar o pedido.
         </button>
     </div>
+    <script src="./js/main.js"></script>
 </body>
 </html>
