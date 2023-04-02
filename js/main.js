@@ -53,11 +53,52 @@ function checkIfOrderComplete() {
 }
 
 function EnableButton() {
-    document.querySelector(".bottom-bar button").disabled = false;
+    const fobutton = document.querySelector(".bottom-bar button");
+    fobutton.disabled = false;
+    fobutton.innerHTML = "Fechar pedido"
 }
 
 function finishOrder() {
-    console.log("buttotn pressed")
+    document.querySelector(".whiteBar").classList.remove("escondido");
+    updateConfirmOrderModal();
+}
+
+function updateConfirmOrderModal() {
+    const types = Object.values(optionType)
+    totalPrice = 0;
+
+    types.forEach(type => {
+        document.querySelector("." + type + " h1").innerHTML = currentOrderData[type].data.name;
+        document.querySelector("." + type + " span").innerHTML = currentOrderData[type].data.price;
+        totalPrice += currentOrderData[type].data.price
+    });
+
+    document.querySelector(".total span").innerHTML = "R$ " + totalPrice;
+}
+
+function confirmOrder() {
+    const nome = prompt("Digite seu nome: ")
+    const endereco = prompt("Digite seu endereço: ")
+
+    const texto = `Olá, gostaria de fazer o pedido:
+    - Prato: ${currentOrderData["Prato"].data.name}
+    - Bebida: ${currentOrderData["Bebida"].data.name}
+    - Sobremesa: ${currentOrderData["Sobremesa"].data.name}
+    Total: R$ ${totalPrice};
+
+    Nome: ${nome}
+    Endereço: ${endereco}
+    `
+
+    const URI = encodeURIComponent(texto);
+    const URL = "https://wa.me/5584987938947?text="+URI; 
+
+    window.open(URL, '_blank')
+    console.log(texto)
+}
+
+function cancelOrder() {
+     document.querySelector(".whiteBar").classList.add("escondido"); 
 }
 
 // Constantes e variáveis de "database" artificial.
@@ -92,8 +133,9 @@ const db = {
     }, 
 }
 
+let totalPrice = 0;
 
-var currentOrderData = {
+let currentOrderData = {
     "Prato": undefined,
     "Bebida": undefined,
     "Sobremesa": undefined

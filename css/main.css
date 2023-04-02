@@ -208,6 +208,11 @@ header {
 #dialogueTitle {
     padding: 20px;
 }
+
+.escondido {
+    display: none;
+}
+
 .confirmarPedido h1, .confirmarPedido span {
     color: #FFFFFF;
     font-weight: 700;
@@ -217,7 +222,7 @@ header {
 }
 
 
-.orderDisplay, .prato, .bebida, .sobremesa, .total {
+.orderDisplay, .Prato, .Bebida, .Sobremesa, .total {
     display: flex;
     justify-content: space-around;
     align-items: center;
