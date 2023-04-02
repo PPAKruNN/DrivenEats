@@ -11,17 +11,17 @@ Html, css and Vanilla Js.
 - [ ]  Faça *commits* a cada funcionalidade implementada.
 
  ### Layout
-- [ ]  Aplicar layout para *mobile*, seguindo o Figma fornecido.
-- [ ]  O topo e o botão de fechar pedido devem ter posicionamento fixo e não rolar com a barra de rolagem.
+- [x]  Aplicar layout para *mobile*, seguindo o Figma fornecido.
+- [x]  O topo e o botão de fechar pedido devem ter posicionamento fixo e não rolar com a barra de rolagem.
 - [ ]  É necessário variar o preço em cada item da mesma categoria.
-- [ ]  Utilizar as fontes: [Righteous](https://fonts.google.com/specimen/Righteous) para nome do restaurante e títulos das categorias, e [Roboto](https://fonts.google.com/specimen/Roboto) para os demais textos.
-- [ ]  Para fazer as sombras presentes em alguns elementos, pesquise sobre como aplicar sombras em CSS e brinque com os valores até ficar parecido com as imagens do *layout*.
-- [ ]  Para fazer os produtos rolarem horizontalmente, utilize `overflow-x: scroll`.
+- [x]  Utilizar as fontes: [Righteous](https://fonts.google.com/specimen/Righteous) para nome do restaurante e títulos das categorias, e [Roboto](https://fonts.google.com/specimen/Roboto) para os demais textos.
+- [x]  Para fazer as sombras presentes em alguns elementos, pesquise sobre como aplicar sombras em CSS e brinque com os valores até ficar parecido com as imagens do *layout*.
+- [x]  Para fazer os produtos rolarem horizontalmente, utilize `overflow-x: scroll`.
 
 ### Seleção de itens
-- [ ]  Ao clicar sobre um item, ele deve ser marcado como selecionado.
+- [x]  Ao clicar sobre um item, ele deve ser marcado como selecionado.
 - [ ]  Ao clicar em um item, caso já exista um item selecionado na mesma categoria, este deve ser desmarcado e o novo item clicado deve ser o novo selecionado.
-- [ ]  Ao clicar em um item já marcado, não é necessário desmarcá-lo.
+- [x]  Ao clicar em um item já marcado, não é necessário desmarcá-lo.
 
 ### Botão de finalizar pedido
 - [ ]  Por padrão, o botão de finalizar pedido deve vir desabilitado. Ao clicar no botão nesse estado, nada deve acontecer. (Além de alterar o estilo, use o atributo **disabled** no HTML da tag button.)

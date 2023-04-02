@@ -98,7 +98,7 @@ header {
     padding: 20px;
     gap: 16px;
 
-    overflow-x: auto;
+    overflow-x: scroll;
 }
 
 .option {
@@ -159,4 +159,8 @@ header {
 
 .selected-option {
     border: 5px solid #32b72f;
+}
+
+.selected-check {
+    display: block;
 }
