@@ -120,10 +120,52 @@ const db = {
         "price": 27.70
     },
 
+    "parmegiana": {
+        "name": "Parmegiana de frango",
+        "optionType": optionType.Prato,
+        "price": 32.50
+    },
+    
+    "macarrao": {
+        "name": "Macarrão alho e óleo",
+        "optionType": optionType.Prato,
+        "price": 15
+    },
+
+    "arrozfeijao": {
+        "name": "Arroz branco e feijão",
+        "optionType": optionType.Prato,
+        "price": 20.99
+    },
+    
+    "cuzcuz": {
+        "name": "Cuzcuz com ovo",
+        "optionType": optionType.Prato,
+        "price": 12.50
+    },
+
    "coca": {
         "name": "Coquinha gelada",
         "optionType": optionType.Bebida,
         "price": 8.25
+    },
+    
+    "fanta": {
+        "name": "Fanta laranja",
+        "optionType": optionType.Bebida,
+        "price": 6.30
+    },
+
+    "kuat": {
+        "name": "Kuat",
+        "optionType": optionType.Bebida,
+        "price": 3.70
+    },
+
+    "jesus": {
+        "name": "Guaraná jesus",
+        "optionType": optionType.Bebida,
+        "price": 9.89
     },
 
     "brigadeiro": {
@@ -131,6 +173,24 @@ const db = {
         "optionType": optionType.Sobremesa,
         "price": 3.50
     }, 
+
+    "pudim": {
+        "name": "Pudimzin",
+        "optionType": optionType.Sobremesa,
+        "price": 5
+    },
+
+    "milkshake": {
+        "name": "Milky Moo",
+        "optionType": optionType.Sobremesa,
+        "price": 12
+    },
+
+    "pizzadoce": {
+        "name": "Pizza M de chocolate",
+        "optionType": optionType.Sobremesa,
+        "price": 25
+    }
 }
 
 let totalPrice = 0;
