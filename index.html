@@ -26,11 +26,11 @@
 
         <h1>Primeiro, seu prato</h1>
         <div class="options-box">
-            <div class="option"onclick="optionClicked('frangoyy', this)">
+            <div class="option" data-test="dish" onclick="optionClicked('frangoyy', this)">
                 <img src="src/manoel.jpg" alt="img">
-                <h1>Frango Yin Yang</h1>
+                <h1 data-test="item-name">Frango Yin Yang</h1>
                 <h2>Um pouco de batata, um pouco de salada</h2>
-                <span class="price">R$ 14,90</span>
+                <span class="price" data-test="item-price">R$ 14,90</span>
                 
                 
                 <img class="check" src="src/checkmark-circle-outline.svg">
@@ -40,22 +40,24 @@
 
         <h1>Agora, sua bebida</h1>
         <div class="options-box">
-            <div class="option" onclick="optionClicked('coca', this)">
+            <div class="option" data-test="drink" onclick="optionClicked('coca', this)">
                 <img src="src/manoel.jpg" alt="img">
-                <h1>Frango Yin Yang</h1>
+                <h1 data-test="item-name">Frango Yin Yang</h1>
                 <h2>Um pouco de batata, um pouco de salada</h2>
-                <span class="price">R$ 14,90</span>
+                <span class="price" data-test="item-price">R$ 14,90</span>
+
+
                 <img class="check" src="src/checkmark-circle-outline.svg">
             </div>
         </div>
 
         <h1>Por fim, sua sobremesa</h1>
         <div class="options-box">
-            <div class="option" onclick="optionClicked('brigadeiro', this)">
+            <div class="option" data-test="dessert" onclick="optionClicked('brigadeiro', this)">
                 <img src="src/manoel.jpg" alt="img">
-                <h1>Frango Yin Yang</h1>
+                <h1 data-test="item-name">Frango Yin Yang</h1>
                 <h2>Um pouco de batata, um pouco de salada</h2>
-                <span class="price">R$ 14,90</span>
+                <span class="price" data-test="item-price">R$ 14,90</span>
                 <img class="check" src="src/checkmark-circle-outline.svg">
             </div>
         </div>
@@ -64,7 +66,7 @@
     </div>
 
     <div class="whiteBar escondido">
-        <div class="confirmarPedido">
+        <div class="confirmarPedido" data-test="confirm-order-modal">
             <h1 id="dialogueTitle">Confirmar Pedido</h1>
             <div class="orderDisplay">
                 <div class="Prato">
@@ -85,10 +87,10 @@
                 </div>
             </div>
             <div class="actions">
-                <button class="confirm" onclick="confirmOrder()">
+                <button class="confirm" onclick="confirmOrder()" data-test="confirm-order-btn">
                     Tudo certo, pode pedir!
                 </button>
-                <button class="cancel" onclick="cancelOrder()">
+                <button class="cancel" onclick="cancelOrder()" data-test="cancel-order-btn">
                     Cancelar
                 </button>
             </div>
@@ -96,7 +98,7 @@
     </div>
     
     <div class="bottom-bar">
-        <button disabled onclick="finishOrder()">
+        <button disabled data-test="order-btn" onclick="finishOrder()">
             Selecione os 3 itens para fechar o pedido.
         </button>
     </div>
