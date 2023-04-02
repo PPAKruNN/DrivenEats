@@ -35,11 +35,7 @@ function addSelection(el) {
 
 function checkIfOnOrder(optionTypeData) {
     //Checa se já existe o tipo de item que quer ser adicionado no pedido atual.
-    const check = (currentOrderData[optionTypeData] != undefined)
-    console.log(optionTypeData)
-
-    check ? console.log("Já existe esse tipo no pedido") : console.log("Não havia este tipo no pedido")
-    return check;
+    return (currentOrderData[optionTypeData] != undefined)
 }
  
 function addToOrder(elemento, currData) {
@@ -47,9 +43,8 @@ function addToOrder(elemento, currData) {
 }
 
 function checkIfOrderComplete() {
-    const res = checkIfOnOrder(optionType.Prato) && checkIfOnOrder(optionType.Bebida)  && checkIfOnOrder(optionType.Sobremesa);
-    console.log("Is order full?: " + res )
-    return res;
+    return checkIfOnOrder(optionType.Prato) && checkIfOnOrder(optionType.Bebida)  && checkIfOnOrder(optionType.Sobremesa);
+     
 }
 
 function EnableButton() {
