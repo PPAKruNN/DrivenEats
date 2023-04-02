@@ -46,23 +46,30 @@ header {
 
     bottom: 0px;
     left: 0px;
-
+    
     background-color: #FFFFFF;
 }
 
 .bottom-bar button {
     width: 90%;
     height: 70%;
-
+    
     border-radius: 50px;
     border: none;
-    background-color: #cbcbcb;
-
+    
     font-weight: 400;
     font-size: 20px;
     line-height: 23px;
     text-align: center;
     color: #FFFFFF;
+}
+
+.bottom-bar button {
+    background-color: #32B72F;
+}
+
+.bottom-bar button:disabled {
+    background-color: #CBCBCB;
 }
 
 .content {
@@ -163,4 +170,103 @@ header {
 
 .selected-check {
     display: block;
+}
+
+.whiteBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 2;
+
+}
+
+.confirmarPedido {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+    width: 400px;
+    height: 400px;
+
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.25);
+
+    background-color: #50D074;
+
+}
+
+#dialogueTitle {
+    padding: 20px;
+}
+.confirmarPedido h1, .confirmarPedido span {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+}
+
+
+.orderDisplay, .prato, .bebida, .sobremesa, .total {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.orderDisplay {
+    height: 200px;
+    width: 100%;
+
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.orderDisplay h1 {
+    font-weight: 400;
+    text-align: left;
+}
+
+.orderDisplay span {
+    font-weight: 400;
+    text-align: right;
+}
+
+.total h1, .total span {
+    font-weight: 700;
+}
+
+.confirm, .cancel {
+    width: 85%;
+    height: 56px;
+
+    border-radius: 54px;
+    border: none;
+    background-color: #FFFFFF;
+    
+    color: #50D074;
+    font-weight: 700;
+    line-height: 26px;
+    font-size: 22px;
+}
+
+.cancel {
+    background-color: transparent;
+    color: #fff;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    width: 100%;
 }

@@ -5,7 +5,7 @@ function optionClicked(optionName, element) {
     // Selected são os dados referentes ao prato.
     // element é o elemento html do prato.
 
-    const inOrder = checkIfOnOrder(selected);
+    const inOrder = checkIfOnOrder(selected.optionType);
     
     if(inOrder) {
         const elementoAnterior = currentOrderData[selected.optionType];
@@ -13,16 +13,14 @@ function optionClicked(optionName, element) {
 
         addToOrder(element, selected)
         addSelection(element)
-    }
-    
-    else {
+    } else {
         addToOrder(element, selected)
         addSelection(element)
     }
 
     console.log(currentOrderData)
     
-    // checa se tem 3 itens selecionados e libera o botão.
+    if(checkIfOrderComplete()) EnableButton()
 }
 
 function removeSelection(el) {
@@ -35,15 +33,31 @@ function addSelection(el) {
     el.lastChild.previousElementSibling.classList.add("selected-check");
 }
 
-function checkIfOnOrder(currData) {
+function checkIfOnOrder(optionTypeData) {
     //Checa se já existe o tipo de item que quer ser adicionado no pedido atual.
-    const check = (currentOrderData[currData.optionType] != undefined)
+    const check = (currentOrderData[optionTypeData] != undefined)
+    console.log(optionTypeData)
+
     check ? console.log("Já existe esse tipo no pedido") : console.log("Não havia este tipo no pedido")
     return check;
 }
  
 function addToOrder(elemento, currData) {
     currentOrderData[currData.optionType] = {"data": currData, "element": elemento}
+}
+
+function checkIfOrderComplete() {
+    const res = checkIfOnOrder(optionType.Prato) && checkIfOnOrder(optionType.Bebida)  && checkIfOnOrder(optionType.Sobremesa);
+    console.log("Is order full?: " + res )
+    return res;
+}
+
+function EnableButton() {
+    document.querySelector(".bottom-bar button").disabled = false;
+}
+
+function finishOrder() {
+    console.log("buttotn pressed")
 }
 
 // Constantes e variáveis de "database" artificial.

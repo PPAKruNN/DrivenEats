@@ -63,8 +63,40 @@
 
     </div>
 
+    <div class="whiteBar">
+        <div class="confirmarPedido">
+            <h1 id="dialogueTitle">Confirmar Pedido</h1>
+            <div class="orderDisplay">
+                <div class="prato">
+                    <h1>Frango yin yang</h1>
+                    <span>R$ 00,00</span>
+                </div>
+                <div class="bebida">
+                    <h1>Frango yin yang</h1>
+                    <span>R$ 00,00</span>
+                </div>
+                <div class="sobremesa">
+                    <h1>Frango yin yang</h1>
+                    <span>R$ 00,00</span>
+                </div>
+                <div class="total">
+                    <h1>Total</h1>
+                    <span> muito</span>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="confirm">
+                    Tudo certo, pode pedir!
+                </button>
+                <button class="cancel">
+                    Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+    
     <div class="bottom-bar">
-        <button disabled>
+        <button disabled onclick="finishOrder()">
             Selecione os 3 itens para fechar o pedido.
         </button>
     </div>
